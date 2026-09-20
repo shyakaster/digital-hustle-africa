@@ -39,5 +39,5 @@ jobs:
       - name: Link check (Lychee)
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --exclude '^#' --exclude 'mailto:' './**/*.html' './**/*.md'
+          args: --verbose --no-progress --exclude '^#' --exclude 'mailto:' --exclude-path 'node_modules' --exclude-path '.git' './**/*.html' './**/*.md'
           fail: true
