@@ -14,7 +14,7 @@
       content="Honest conversations about work, ambition and home, from Africans on both sides of the border. Season One, every two weeks."
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#F3B728" />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -30,23 +30,19 @@
     />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
-  <body
-    class="bg-brand-bg text-brand-charcoal font-sans antialiased selection:bg-brand-yellow selection:text-brand-charcoal"
-  >
+  <body class="bg-black text-white font-sans antialiased selection:bg-brand-sun selection:text-black">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-brand-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-brand-sun focus:text-black focus:px-4 focus:py-2 focus:rounded-lg"
       >Skip to content</a
     >
 
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-black/5">
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
       <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group" aria-label="Digital Hustle Africa — home">
-          <div
-            class="w-10 h-10 rounded-xl bg-brand-yellow flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform"
-          >
-            <svg class="w-6 h-6 fill-current text-brand-charcoal" viewBox="0 0 100 100" aria-hidden="true">
+          <div class="w-10 h-10 flex items-center justify-center group-hover:rotate-6 transition-transform">
+            <svg class="w-10 h-10 fill-current text-brand-sun" viewBox="0 0 100 100" aria-hidden="true">
               <path
                 d="M34 20 L44 15 L52 16 L55 12 L58 16 L68 18 L75 23 L74 30 L71 36 L78 39 L85 44 L80 49 L75 53 L73 62 L69 72 L63 81 L57 88 L53 85 L51 77 L47 68 L45 60 L39 56 L33 55 L28 51 L22 47 L20 39 L24 31 L29 25 Z"
               />
@@ -55,31 +51,31 @@
           </div>
           <div class="flex flex-col">
             <span class="font-extrabold text-lg leading-none tracking-tight">Digital Hustle</span>
-            <span class="text-xs font-semibold tracking-widest uppercase text-brand-coral">Africa</span>
+            <span class="text-xs font-semibold tracking-widest uppercase text-brand-sun">Africa</span>
           </div>
         </a>
 
         <nav class="hidden md:flex items-center gap-8 font-semibold text-sm" aria-label="Main">
-          <a href="index.html" class="hover:text-brand-coral transition-colors">Home</a>
+          <a href="index.html" class="hover:text-brand-sun transition-colors">Home</a>
           <a
             href="episodes.html"
             aria-current="page"
-            class="underline decoration-brand-yellow decoration-4 underline-offset-8"
+            class="underline decoration-brand-sun decoration-4 underline-offset-8"
             >Episodes</a
           >
-          <a href="about.html" class="hover:text-brand-coral transition-colors">About</a>
+          <a href="about.html" class="hover:text-brand-sun transition-colors">About</a>
         </nav>
 
         <div class="flex items-center gap-3">
           <a
             href="index.html#listen"
-            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-charcoal text-white text-sm font-semibold hover:bg-brand-coral transition-colors"
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-sun text-black text-sm font-semibold hover:bg-white/5 transition-colors"
             >Follow the show</a
           >
           <button
             id="menu-btn"
             type="button"
-            class="md:hidden w-11 h-11 rounded-xl border border-black/10 flex items-center justify-center"
+            class="md:hidden w-11 h-11 rounded-xl border border-white/15 flex items-center justify-center"
             aria-expanded="false"
             aria-controls="mobile-menu"
             aria-label="Menu"
@@ -99,22 +95,22 @@
       </div>
       <nav
         id="mobile-menu"
-        class="hidden md:hidden border-t border-black/5 px-6 py-4 space-y-3 font-semibold"
+        class="hidden md:hidden border-t border-white/10 px-6 py-4 space-y-3 font-semibold"
         aria-label="Mobile"
       >
         <a href="index.html" class="block">Home</a>
         <a href="episodes.html" class="block">Episodes</a>
         <a href="about.html" class="block">About</a>
-        <a href="index.html#listen" class="block text-brand-coral">Follow the show →</a>
+        <a href="index.html#listen" class="block text-brand-sun">Follow the show →</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="px-6 pt-14 pb-10 md:pt-20">
         <div class="max-w-6xl mx-auto">
-          <p class="text-xs font-bold uppercase tracking-widest text-brand-coral">Season One</p>
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-sun">Season One</p>
           <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight mt-2">Eight conversations.</h1>
-          <p class="mt-5 text-lg md:text-xl text-brand-muted max-w-2xl">
+          <p class="mt-5 text-lg md:text-xl text-brand-stone max-w-2xl">
             One new episode every two weeks, in audio and video. Each one starts with a question. Yours might be the
             same.
           </p>
@@ -124,12 +120,12 @@
         <ol class="max-w-6xl mx-auto space-y-5">
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">01</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">01</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-charcoal text-brand-yellow"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-sun text-black"
                   >First up</span
                 >
               </div>
@@ -137,20 +133,16 @@
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">
                   So… What Happened to Digital Hustle Africa?
                 </h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   The reunion. We catch up on where our careers actually went, what the first run of the show taught us,
                   and whether “hustle” still fits.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Reunion
-                  </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Careers
-                  </li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Reunion</li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Careers</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   Where did you think you’d be by now?
@@ -160,30 +152,28 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">02</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">02</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
               <div class="md:col-span-7">
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">Leaving Home</h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   Relocating for work sounds like a win. We talk about what it gave, what it cost, and who paid.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Migration
                   </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Family
-                  </li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Family</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   What would you have asked for before you left?
@@ -193,30 +183,28 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">03</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">03</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
               <div class="md:col-span-7">
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">Starting Again</h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   Your title doesn’t travel. A guest on rebuilding a career after a move or a major life change.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Reinvention
                   </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Careers
-                  </li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Careers</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">What did you have to unlearn?</p>
               </div>
@@ -224,12 +212,12 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">04</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">04</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
@@ -237,17 +225,17 @@
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">
                   Can You Actually Work From Anywhere?
                 </h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   Remote work, through an African lens: time zones, wi-fi, visas and the fine print the job ads skip.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Remote work
                   </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">Money</li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Money</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   Is “anywhere” really anywhere?
@@ -257,28 +245,28 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">05</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">05</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
               <div class="md:col-span-7">
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">Building From Home</h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   A founder, freelancer or creative on building at home. The real version, minus the mythology.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Entrepreneurship
                   </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">Home</li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Home</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   What’s the part nobody posts about?
@@ -288,12 +276,12 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">06</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">06</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
@@ -301,19 +289,17 @@
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">
                   What Nobody Tells You About the Diaspora
                 </h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   Belonging, money, loneliness and identity. The things you only learn after you’ve landed.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Belonging
                   </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Identity
-                  </li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Identity</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   Who are you when home is two places?
@@ -323,29 +309,27 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">07</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">07</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
               <div class="md:col-span-7">
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">Going Back</h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   Someone who returned home after years abroad: what they expected, what they found, and what they’d do
                   again.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
-                    Return
-                  </li>
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">Home</li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Return</li>
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">Home</li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   What are you really afraid of coming back to?
@@ -355,27 +339,27 @@
           </li>
           <li>
             <article
-              class="card-lift rounded-3xl bg-white border border-black/5 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
+              class="card-lift rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6"
             >
               <div class="md:col-span-2 flex md:block items-center gap-4">
-                <span class="font-display font-extrabold text-6xl text-brand-coral leading-none">08</span>
+                <span class="font-display font-extrabold text-6xl text-brand-sun leading-none">08</span>
                 <span
-                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-yellow/40 text-brand-charcoal"
+                  class="inline-block md:mt-3 text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/25 text-brand-stone"
                   >Coming soon</span
                 >
               </div>
               <div class="md:col-span-7">
                 <h2 class="font-display font-extrabold text-2xl sm:text-3xl leading-tight">What Did We Learn?</h2>
-                <p class="mt-3 text-brand-muted leading-relaxed">
+                <p class="mt-3 text-brand-stone leading-relaxed">
                   We look back over the season and decide what, if anything, comes next.
                 </p>
                 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Topics">
-                  <li class="px-3 py-1 rounded-full bg-brand-bg border border-black/10 text-xs font-semibold">
+                  <li class="px-3 py-1 rounded-full bg-black border border-white/15 text-xs font-semibold">
                     Reflection
                   </li>
                 </ul>
               </div>
-              <div class="md:col-span-3 rounded-2xl bg-brand-yellow/25 p-5 self-start">
+              <div class="md:col-span-3 rounded-2xl bg-brand-sun/10 p-5 self-start">
                 <p class="text-[11px] font-bold uppercase tracking-widest">Ask yourself</p>
                 <p class="mt-2 font-display font-semibold italic text-lg leading-snug">
                   What should we talk about next?
@@ -384,22 +368,22 @@
             </article>
           </li>
         </ol>
-        <p class="max-w-6xl mx-auto mt-10 text-brand-muted">
+        <p class="max-w-6xl mx-auto mt-10 text-brand-stone">
           Episodes appear here the day they go live, with notes, timestamps and a pull-quote.
         </p>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="px-6 py-10 border-t border-black/5 bg-white">
+    <footer class="px-6 py-10 border-t border-white/10 bg-white/5">
       <div
-        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-brand-muted"
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-brand-stone"
       >
         <p>© 2026 Digital Hustle Africa. Hustle responsibly.</p>
-        <nav class="flex gap-6 font-semibold text-brand-charcoal" aria-label="Footer">
-          <a href="index.html" class="hover:text-brand-coral">Home</a>
-          <a href="episodes.html" class="hover:text-brand-coral">Episodes</a>
-          <a href="about.html" class="hover:text-brand-coral">About</a>
+        <nav class="flex gap-6 font-semibold text-white" aria-label="Footer">
+          <a href="index.html" class="hover:text-brand-sun">Home</a>
+          <a href="episodes.html" class="hover:text-brand-sun">Episodes</a>
+          <a href="about.html" class="hover:text-brand-sun">About</a>
         </nav>
       </div>
     </footer>

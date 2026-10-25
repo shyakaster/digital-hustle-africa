@@ -1,6 +1,6 @@
 /* Highlighter-pen underline for one word per headline */
 .hl {
-  background: linear-gradient(transparent 62%, #f3b728 62%, #f3b728 92%, transparent 92%);
+  background: linear-gradient(transparent 62%, #ffde59 62%, #ffde59 92%, transparent 92%);
   padding: 0 0.1em;
 }
 .card-lift {
@@ -10,11 +10,11 @@
 }
 .card-lift:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px -12px rgba(24, 24, 27, 0.25);
+  box-shadow: 0 14px 30px -12px rgba(255, 222, 89, 0.18);
 }
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #18181b;
+  outline: 3px solid #ffde59;
   outline-offset: 3px;
   border-radius: 8px;
 }

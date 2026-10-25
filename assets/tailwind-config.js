@@ -7,12 +7,12 @@ tailwind.config = {
       },
       colors: {
         brand: {
-          yellow: "#F3B728",
-          charcoal: "#18181B",
-          coral: "#E05638",
-          bg: "#FBF9F5",
-          card: "#FFFFFF",
-          muted: "#5F6672",
+          night: "#000000",
+          paper: "#FFFFFF",
+          sun: "#FFDE59",
+          amber: "#FFBA59",
+          stone: "#9C9C9C",
+          peach: "#FFDDAE",
         },
       },
     },
