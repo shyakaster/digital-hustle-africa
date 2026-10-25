@@ -4,7 +4,7 @@
   "private": true,
   "description": "Official landing page for the Digital Hustle Africa podcast.",
   "scripts": {
-    "lint:html": "htmlhint index.html",
+    "lint:html": "htmlhint *.html",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md,yml,yaml}\"",
     "format:write": "prettier --write \"**/*.{html,css,js,json,md,yml,yaml}\""
   },
