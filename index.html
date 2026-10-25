@@ -6,12 +6,12 @@
     <title>Digital Hustle Africa — Podcast</title>
     <meta
       name="description"
-      content="Digital Hustle Africa — how Africans at home and across the diaspora navigate work, ambition, and life in the global digital economy. Hosted by Alex & Chaz."
+      content="Honest conversations about how Africans, at home and abroad, are building lives and careers when geography stops deciding everything. Hosted by Alex &amp; Chaz."
     />
-    <meta property="og:title" content="Digital Hustle Africa — Podcast" />
+    <meta property="og:title" content="Digital Hustle Africa — The hustle looks different from here" />
     <meta
       property="og:description"
-      content="Navigating work, ambition & life across borders. Season 1 — 8 bi-weekly episodes (video + audio)."
+      content="Honest conversations about work, ambition and home, from Africans on both sides of the border. Season One, every two weeks."
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#F3B728" />
@@ -20,48 +20,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <script src="assets/tailwind-config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Plus Jakarta Sans", "sans-serif"],
-            },
-            colors: {
-              brand: {
-                yellow: "#F3B728",
-                charcoal: "#18181B",
-                coral: "#E05638",
-                bg: "#FBF9F5",
-                card: "#FFFFFF",
-                muted: "#6B7280",
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="assets/site.css" />
   </head>
   <body
     class="bg-brand-bg text-brand-charcoal font-sans antialiased selection:bg-brand-yellow selection:text-brand-charcoal"
   >
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-brand-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
+      >Skip to content</a
+    >
+
     <!-- NAVBAR -->
     <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-black/5">
       <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Digital Hustle Africa — home">
           <div
-            class="w-10 h-10 rounded-xl bg-brand-yellow flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform"
+            class="w-10 h-10 rounded-xl bg-brand-yellow flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform"
           >
             <svg class="w-6 h-6 fill-current text-brand-charcoal" viewBox="0 0 100 100" aria-hidden="true">
               <path
@@ -76,251 +59,323 @@
           </div>
         </a>
 
-        <!-- Navigation -->
-        <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-brand-charcoal/80">
-          <a href="#episodes" class="hover:text-brand-coral transition-colors">Episodes</a>
-          <a href="#about" class="hover:text-brand-coral transition-colors">About</a>
-          <a href="#hosts" class="hover:text-brand-coral transition-colors">Hosts</a>
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-sm" aria-label="Main">
+          <a
+            href="index.html"
+            aria-current="page"
+            class="underline decoration-brand-yellow decoration-4 underline-offset-8"
+            >Home</a
+          >
+          <a href="episodes.html" class="hover:text-brand-coral transition-colors">Episodes</a>
+          <a href="about.html" class="hover:text-brand-coral transition-colors">About</a>
         </nav>
 
-        <!-- CTA -->
-        <a
-          href="#listen"
-          class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-charcoal text-white text-sm font-semibold hover:bg-brand-coral transition-all shadow-sm"
-        >
-          Listen Now
-        </a>
+        <div class="flex items-center gap-3">
+          <a
+            href="#listen"
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-charcoal text-white text-sm font-semibold hover:bg-brand-coral transition-colors"
+            >Follow the show</a
+          >
+          <button
+            id="menu-btn"
+            type="button"
+            class="md:hidden w-11 h-11 rounded-xl border border-black/10 flex items-center justify-center"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Menu"
+          >
+            <svg
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
       </div>
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-black/5 px-6 py-4 space-y-3 font-semibold"
+        aria-label="Mobile"
+      >
+        <a href="index.html" class="block">Home</a>
+        <a href="episodes.html" class="block">Episodes</a>
+        <a href="about.html" class="block">About</a>
+        <a href="#listen" class="block text-brand-coral">Follow the show →</a>
+      </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="pt-12 pb-20 md:pt-20 md:pb-28 px-6">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Text Copy -->
-        <div class="lg:col-span-7 space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-yellow/20 text-brand-charcoal text-xs font-bold uppercase tracking-wider"
-          >
-            <span class="w-2 h-2 rounded-full bg-brand-coral animate-pulse"></span> Season One Launching Soon
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-charcoal leading-[1.1] tracking-tight">
-            Navigating work, ambition &amp; life across borders.
-          </h1>
-
-          <p class="text-lg text-brand-muted leading-relaxed max-w-xl">
-            Join Chaz and Alex as they explore how Africans at home and across the diaspora build careers, navigate
-            change, and redefine work in today's global digital economy.
-          </p>
-
-          <!-- Platforms -->
-          <div class="pt-2">
-            <span class="block text-xs font-bold uppercase tracking-wider text-brand-muted mb-3"
-              >Listen on your favorite platform</span
+    <main id="main">
+      <!-- HERO -->
+      <section class="px-6 pt-14 pb-16 md:pt-24 md:pb-24">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-7">
+            <p
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-yellow/25 text-xs font-bold uppercase tracking-wider"
             >
-            <div class="flex flex-wrap gap-3">
+              <span class="w-2 h-2 rounded-full bg-brand-coral animate-pulse"></span> Season One · Coming soon
+            </p>
+            <h1 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight">
+              The <span class="hl">hustle</span> looks different from here.
+            </h1>
+            <p class="text-lg md:text-xl text-brand-muted leading-relaxed max-w-xl">
+              Two friends. One long-running question: what happens to African lives when work, home and opportunity stop
+              living in the same place?
+            </p>
+            <div class="flex flex-wrap gap-3 pt-1">
               <a
-                href="#listen"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-black/10 text-sm font-semibold hover:border-brand-yellow transition-all shadow-sm"
+                href="episodes.html"
+                class="inline-flex items-center px-6 py-3.5 rounded-full bg-brand-charcoal text-white font-semibold hover:bg-brand-coral transition-colors"
+                >See Season One →</a
               >
-                <span>Spotify</span>
-              </a>
               <a
-                href="#listen"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-black/10 text-sm font-semibold hover:border-brand-yellow transition-all shadow-sm"
+                href="about.html"
+                class="inline-flex items-center px-6 py-3.5 rounded-full border-2 border-brand-charcoal font-semibold hover:bg-brand-yellow transition-colors"
+                >Who’s talking?</a
               >
-                <span>Apple Podcasts</span>
-              </a>
-              <a
-                href="#listen"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-black/10 text-sm font-semibold hover:border-brand-yellow transition-all shadow-sm"
-              >
-                <span>YouTube</span>
-              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Episode Player Card -->
-        <div class="lg:col-span-5" id="listen">
-          <div class="bg-brand-card p-6 sm:p-8 rounded-3xl border border-black/5 shadow-xl space-y-4">
-            <div class="flex items-center justify-between">
-              <span
-                class="text-xs font-bold uppercase tracking-wider text-brand-coral bg-brand-coral/10 px-3 py-1 rounded-full"
-                >Featured Track</span
-              >
-              <span class="text-xs font-medium text-brand-muted">S1 • Ep 01</span>
-            </div>
-
-            <h3 class="text-xl font-bold text-brand-charcoal">So... What Happened to Digital Hustle Africa?</h3>
-            <p class="text-xs text-brand-muted leading-relaxed">
-              The reunion episode. Alex &amp; Chaz unpack career shifts, remote work lessons, and what actually changed
-              since starting at Andela.
-            </p>
-
-            <!-- Audio Player Box -->
-            <div class="bg-brand-bg p-4 rounded-2xl border border-black/5 space-y-3">
-              <div class="flex items-center gap-4">
-                <button
-                  aria-label="Play episode"
-                  class="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-brand-charcoal hover:scale-105 transition-transform shadow-md flex-shrink-0"
+          <!-- Episode One card -->
+          <div class="lg:col-span-5">
+            <div class="relative">
+              <div
+                class="absolute inset-0 translate-x-3 translate-y-3 rounded-[2rem] bg-brand-yellow"
+                aria-hidden="true"
+              ></div>
+              <article class="relative rounded-[2rem] bg-brand-charcoal text-white p-8 sm:p-10">
+                <p class="text-xs font-bold uppercase tracking-widest text-brand-yellow">First up · Episode 01</p>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl leading-tight mt-4">
+                  So… what happened to Digital Hustle Africa?
+                </h2>
+                <p class="text-white/70 mt-4 leading-relaxed">
+                  The reunion. Where we thought our careers would go, where they actually went, and whether we still
+                  believe in the word “hustle”.
+                </p>
+                <p
+                  class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-brand-charcoal bg-brand-yellow px-4 py-2 rounded-full"
                 >
-                  <svg class="w-5 h-5 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                </button>
-                <div class="flex-1">
-                  <div class="h-2 bg-black/10 rounded-full overflow-hidden">
-                    <div class="w-1/3 h-full bg-brand-coral rounded-full"></div>
-                  </div>
-                  <div class="flex justify-between text-[11px] text-brand-muted font-semibold mt-1.5">
-                    <span>14:20</span>
-                    <span>48:15</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center pt-2">
-              <a
-                href="#episodes"
-                class="text-xs font-bold text-brand-charcoal hover:text-brand-coral underline underline-offset-4"
-              >
-                Read Episode Notes &amp; Highlights →
-              </a>
+                  Dropping soon
+                </p>
+              </article>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EPISODES SECTION -->
-    <section id="episodes" class="py-16 px-6 bg-brand-bg">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-          <div>
-            <p class="text-xs font-bold uppercase tracking-widest text-brand-coral mb-2">
-              Season 1 • 8 bi-weekly episodes
-            </p>
-            <h2 class="text-3xl font-extrabold tracking-tight text-brand-charcoal">Episodes</h2>
-          </div>
-          <p class="text-sm text-brand-muted max-w-md">
-            Video + audio, conversation-first. New episodes every two weeks — follow on your favourite platform so you
-            don't miss the drop.
-          </p>
+      <!-- TOPIC TICKER -->
+      <section
+        class="bg-brand-yellow border-y-2 border-brand-charcoal overflow-hidden"
+        aria-label="Topics we talk about"
+      >
+        <div class="marquee py-4 font-display font-extrabold text-2xl md:text-3xl whitespace-nowrap" aria-hidden="true">
+          <span class="px-5">Leaving home</span><span>✺</span> <span class="px-5">Starting again</span><span>✺</span>
+          <span class="px-5">Working from anywhere</span><span>✺</span> <span class="px-5">Building from home</span
+          ><span>✺</span> <span class="px-5">Belonging</span><span>✺</span> <span class="px-5">Going back</span
+          ><span>✺</span> <span class="px-5">Leaving home</span><span>✺</span> <span class="px-5">Starting again</span
+          ><span>✺</span> <span class="px-5">Working from anywhere</span><span>✺</span>
+          <span class="px-5">Building from home</span><span>✺</span> <span class="px-5">Belonging</span><span>✺</span>
+          <span class="px-5">Going back</span><span>✺</span>
         </div>
+        <p class="sr-only">
+          Leaving home, starting again, working from anywhere, building from home, belonging, going back.
+        </p>
+      </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article class="p-6 rounded-3xl bg-white border border-black/5 shadow-sm">
-            <div class="flex items-center gap-3 mb-3">
-              <span
-                class="text-[11px] font-bold uppercase tracking-wider text-white bg-brand-coral px-2.5 py-1 rounded-full"
-                >S1 E01</span
-              >
-              <span class="text-[11px] font-semibold text-brand-muted">48 min • Reunion</span>
-            </div>
-            <h3 class="font-bold text-lg text-brand-charcoal mb-1">So... What Happened to Digital Hustle Africa?</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Alex &amp; Chaz reunite — from Andela 2019 to remote work, migration, and why the show is back now.
-            </p>
-          </article>
-          <article class="p-6 rounded-3xl bg-white border border-black/5 shadow-sm opacity-80">
-            <div class="flex items-center gap-3 mb-3">
-              <span
-                class="text-[11px] font-bold uppercase tracking-wider text-brand-charcoal bg-brand-yellow/40 px-2.5 py-1 rounded-full"
-                >S1 E02</span
-              >
-              <span class="text-[11px] font-semibold text-brand-muted">Coming soon</span>
-            </div>
-            <h3 class="font-bold text-lg text-brand-charcoal mb-1">Working Across Borders</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">
-              Time zones, visas, and expectations — what it really takes to build a global career from Africa or the
-              diaspora.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-16 px-6 bg-white border-t border-black/5">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-        <div>
-          <p class="text-xs font-bold uppercase tracking-widest text-brand-coral mb-2">About the show</p>
-          <h2 class="text-3xl font-extrabold tracking-tight text-brand-charcoal mb-4">
-            Born at Andela. Rebuilt for the remote era.
+      <!-- IS / ISN'T -->
+      <section class="px-6 py-20 md:py-28">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight max-w-2xl">
+            Let’s save you some time.
           </h2>
-          <p class="text-brand-muted leading-relaxed mb-4">
-            Digital Hustle Africa started from conversations at Andela in 2019 about how Africans participate in the
-            digital economy. Now Alex and Chaz are reviving it — lighter, conversation-focused, and honest about work,
-            ambition, and life across borders.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="p-5 rounded-2xl bg-brand-bg border border-black/5 text-center">
-            <p class="text-2xl font-extrabold text-brand-charcoal">8</p>
-            <p class="text-xs font-semibold text-brand-muted mt-1">Bi-weekly episodes<br />Season 1</p>
-          </div>
-          <div class="p-5 rounded-2xl bg-brand-bg border border-black/5 text-center">
-            <p class="text-2xl font-extrabold text-brand-charcoal">2</p>
-            <p class="text-xs font-semibold text-brand-muted mt-1">Hosts<br />UK • US • UG roots</p>
-          </div>
-          <div class="p-5 rounded-2xl bg-brand-bg border border-black/5 text-center">
-            <p class="text-2xl font-extrabold text-brand-charcoal">100%</p>
-            <p class="text-xs font-semibold text-brand-muted mt-1">Conversation-first<br />Minimal overhead</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOSTS SECTION -->
-    <section id="hosts" class="py-16 px-6 bg-white border-t border-black/5">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <h2 class="text-3xl font-extrabold tracking-tight text-brand-charcoal">Meet Your Hosts</h2>
-          <p class="text-brand-muted text-sm mt-2">
-            Not experts explaining Africa from above—just two peers navigating the same questions.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Alex -->
-          <div class="p-8 rounded-3xl bg-brand-bg border border-black/5 flex flex-col sm:flex-row items-start gap-6">
-            <div
-              class="w-16 h-16 rounded-2xl bg-brand-yellow/30 flex-shrink-0 flex items-center justify-center font-bold text-2xl text-brand-charcoal"
-            >
-              A
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-3xl bg-white border border-black/5 p-8 md:p-10">
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-coral">It is</p>
+              <ul class="mt-5 space-y-4 text-lg font-semibold">
+                <li>Real talk about work, money, family and home.</li>
+                <li>Practical sometimes. Personal sometimes. Funny when it can’t be helped.</li>
+                <li>Two hosts who disagree out loud and stay friends.</li>
+                <li>For anyone figuring out what their life looks like across a border.</li>
+              </ul>
             </div>
+            <div class="rounded-3xl bg-brand-charcoal text-white p-8 md:p-10">
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-yellow">It isn’t</p>
+              <ul class="mt-5 space-y-4 text-lg font-semibold">
+                <li>A tech podcast. (Fine, tech comes up.)</li>
+                <li>A “make money online in 7 days” show.</li>
+                <li>Another reel of polished success stories.</li>
+                <li>Two people explaining Africa to you from a podium.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section class="px-6 py-16 bg-white border-y border-black/5">
+        <div class="max-w-6xl mx-auto">
+          <p class="text-xs font-bold uppercase tracking-widest text-brand-coral">Who’s this for?</p>
+          <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight mt-2 max-w-3xl">
+            Chances are, you’re one of these.
+          </h2>
+          <ul class="mt-8 flex flex-wrap gap-3 text-base font-semibold">
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">Building a career at home</li>
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">Thinking about leaving</li>
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">
+              Freshly landed, still finding the shops
+            </li>
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">
+              Settled abroad, still “from” somewhere
+            </li>
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">
+              Raising kids far from the grandparents
+            </li>
+            <li class="px-5 py-3 rounded-full bg-brand-bg border border-black/10">Quietly planning the trip back</li>
+          </ul>
+          <p class="mt-6 text-brand-muted">Not African but curious? Pull up a chair, you’re welcome too.</p>
+        </div>
+      </section>
+
+      <!-- SEASON ONE -->
+      <section class="px-6 py-20 md:py-28">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
             <div>
-              <h3 class="text-xl font-bold text-brand-charcoal">Alex</h3>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-coral block mb-2">UK / Uganda</span>
-              <p class="text-sm text-brand-muted leading-relaxed">
-                Teaching future technologists in the UK while staying deeply connected to tech ecosystems back in
-                Uganda.
+              <p class="text-xs font-bold uppercase tracking-widest text-brand-coral">Season One</p>
+              <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight mt-2">Eight conversations.</h2>
+            </div>
+            <p class="text-brand-muted max-w-sm">One new episode every two weeks, in audio and video.</p>
+          </div>
+          <ol class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">01</span>
+              <span class="font-bold text-lg leading-snug">So… What Happened to Digital Hustle Africa?</span>
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">02</span>
+              <span class="font-bold text-lg leading-snug"
+                >Leaving Home <span class="font-medium text-brand-muted">— what opportunity actually cost</span></span
+              >
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">03</span>
+              <span class="font-bold text-lg leading-snug"
+                >Starting Again <span class="font-medium text-brand-muted">— reinvention after the move</span></span
+              >
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">04</span>
+              <span class="font-bold text-lg leading-snug">Can You Actually Work From Anywhere?</span>
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">05</span>
+              <span class="font-bold text-lg leading-snug"
+                >Building From Home <span class="font-medium text-brand-muted">— minus the mythology</span></span
+              >
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">06</span>
+              <span class="font-bold text-lg leading-snug">What Nobody Tells You About the Diaspora</span>
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">07</span>
+              <span class="font-bold text-lg leading-snug"
+                >Going Back <span class="font-medium text-brand-muted">— someone who actually did</span></span
+              >
+            </li>
+            <li class="card-lift flex gap-5 items-start rounded-2xl bg-white border border-black/5 p-6">
+              <span class="font-display font-extrabold text-4xl text-brand-coral leading-none">08</span>
+              <span class="font-bold text-lg leading-snug">What Did We Learn?</span>
+            </li>
+          </ol>
+          <a
+            href="episodes.html"
+            class="inline-block mt-8 font-bold underline decoration-brand-yellow decoration-4 underline-offset-8 hover:text-brand-coral"
+            >Read the full lineup →</a
+          >
+        </div>
+      </section>
+
+      <!-- HOSTS TEASER -->
+      <section class="px-6 py-20 bg-brand-charcoal text-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-yellow">Your hosts</p>
+            <h2 class="font-display font-extrabold text-4xl md:text-5xl tracking-tight mt-2">
+              Same questions as you. Different time zones.
+            </h2>
+            <a
+              href="about.html"
+              class="inline-block mt-6 font-bold underline decoration-brand-yellow decoration-4 underline-offset-8 hover:text-brand-yellow"
+              >Meet Alex &amp; Chaz →</a
+            >
+          </div>
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <p class="font-display font-extrabold text-2xl">Alex</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-brand-yellow mt-1">UK · Uganda</p>
+              <p class="text-white/70 mt-3 text-sm leading-relaxed">
+                Teaches future technologists. Stays close to family in Uganda.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-white/5 border border-white/10 p-6">
+              <p class="font-display font-extrabold text-2xl">Chaz</p>
+              <p class="text-xs font-bold uppercase tracking-wider text-brand-yellow mt-1">Sacramento</p>
+              <p class="text-white/70 mt-3 text-sm leading-relaxed">
+                Runs a design consultancy. Navigating motherhood and migration.
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Chaz -->
-          <div class="p-8 rounded-3xl bg-brand-bg border border-black/5 flex flex-col sm:flex-row items-start gap-6">
-            <div
-              class="w-16 h-16 rounded-2xl bg-brand-coral/20 flex-shrink-0 flex items-center justify-center font-bold text-2xl text-brand-coral"
+      <!-- LISTEN -->
+      <section id="listen" class="px-6 py-20 md:py-28 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-display font-extrabold text-4xl md:text-6xl tracking-tight">
+            Be there when it <span class="hl">drops</span>.
+          </h2>
+          <p class="mt-5 text-lg text-brand-muted">
+            Follow wherever you listen. We’ll light these up as soon as Episode 01 is live.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <span
+              aria-disabled="true"
+              class="px-6 py-3.5 rounded-full bg-white border border-black/10 font-semibold text-brand-muted"
+              >Spotify · soon</span
             >
-              C
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-brand-charcoal">Chaz</h3>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-coral block mb-2">Sacramento, CA</span>
-              <p class="text-sm text-brand-muted leading-relaxed">
-                Navigating motherhood, migration, and building an independent design consultancy far from home.
-              </p>
-            </div>
+            <span
+              aria-disabled="true"
+              class="px-6 py-3.5 rounded-full bg-white border border-black/10 font-semibold text-brand-muted"
+              >Apple Podcasts · soon</span
+            >
+            <span
+              aria-disabled="true"
+              class="px-6 py-3.5 rounded-full bg-white border border-black/10 font-semibold text-brand-muted"
+              >YouTube · soon</span
+            >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="py-12 px-6 bg-brand-bg text-center text-xs text-brand-muted border-t border-black/5">
-      <p>© 2026 Digital Hustle Africa • digitalhustleafrica.space</p>
+    <footer class="px-6 py-10 border-t border-black/5 bg-white">
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-brand-muted"
+      >
+        <p>© 2026 Digital Hustle Africa. Hustle responsibly.</p>
+        <nav class="flex gap-6 font-semibold text-brand-charcoal" aria-label="Footer">
+          <a href="index.html" class="hover:text-brand-coral">Home</a>
+          <a href="episodes.html" class="hover:text-brand-coral">Episodes</a>
+          <a href="about.html" class="hover:text-brand-coral">About</a>
+        </nav>
+      </div>
     </footer>
+    <script src="assets/site.js"></script>
   </body>
 </html>

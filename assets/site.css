@@ -1,0 +1,43 @@
+/* Highlighter-pen underline for one word per headline */
+.hl {
+  background: linear-gradient(transparent 62%, #f3b728 62%, #f3b728 92%, transparent 92%);
+  padding: 0 0.1em;
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.card-lift {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -12px rgba(24, 24, 27, 0.25);
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #18181b;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+  .card-lift,
+  .card-lift:hover {
+    transition: none;
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
